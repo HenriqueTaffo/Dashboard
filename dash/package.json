@@ -54,6 +54,7 @@
     "build-vendors": "node build/vendors.js",
     "build-from-html": "npm-run-all clean --parallel css js copy --sequential build-vendors",
     "build-from-pug": "npm-run-all clean --parallel css js copy-assets pug-public --sequential build-vendors",
+    "rimraf": "./node_modules/rimraf/bin.js",
     "clean": "rimraf public",
     "copy": "npm-run-all --parallel copy-*",
     "copy-assets": "copyfiles -a -u 1 \"src/assets/**/*\" public/",
