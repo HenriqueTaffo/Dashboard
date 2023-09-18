@@ -2,7 +2,7 @@
   "ignoreRoot": [".git"],
   "ignore": [
     "build",
-    "dist"
+    "public"
   ],
   "delay": 2500
 }

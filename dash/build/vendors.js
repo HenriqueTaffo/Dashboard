@@ -7,7 +7,7 @@ const path = require('node:path')
 const injector = require('@coreui/vendors-injector')
 
 const extension = path.extname
-const dist = 'dist/'
+const public = 'public/'
 
 const walkSync = (dir, filelist = []) => {
   for (const file of fs.readdirSync(dir)) {
@@ -18,7 +18,7 @@ const walkSync = (dir, filelist = []) => {
 }
 
 const main = () => {
-  const filenames = walkSync(dist)
+  const filenames = walkSync(public)
   for (const filename of filenames) {
     if (extension(filename) === '.html') {
       injector.toFile(filename)
